@@ -1,0 +1,28 @@
+{
+  "name": "angular-firesideChats",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarmenPopoviciu/angular-firesideChats.git"
+  },
+  "devDependencies": {
+    "connect": "^3.3.4",
+    "del": "~1.1.1",
+    "gulp": "~3.8.10",
+    "gulp-concat": "~2.5.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-traceur": "0.17.*",
+    "open": "0.0.5",
+    "serve-static": "~1.8.1",
+    "systemjs-builder": "^0.10.3",
+    "through2": "~0.6.3"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-alpha.18",
+    "es6-module-loader": "0.16.3",
+    "materialize-css": "^0.96.1",
+    "systemjs": "~0.16.6",
+    "whatwg-fetch": "^0.7.0"
+  }
+}
