@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Angular Fireside Chats</title>
+
+        <!-- ES6-related imports -->
+        <script src="lib/traceur-runtime.js"></script>
+        <script src="lib/es6-module-loader-sans-promises.src.js"></script>
+        <script src="lib/extension-register.js"></script>
+        <script>
+            register(System);
+        </script>
+
+        <!-- Angular2-related imports -->
+        <script src="lib/zone.js"></script>
+        <script src="lib/long-stack-trace-zone.js"></script>
+        <script src="lib/angular2.js"></script>
+
+        <!-- other libs -->
+        <script src="lib/fetch.js"></script>
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="lib/materialize.css">
+        <link rel="stylesheet" href="app.css">
+
+        <script>System.import('app')</script>
+    </head>
+
+    <body>
+        <fireside-chats-app></fireside-chats-app>
+    </body>
+</html>

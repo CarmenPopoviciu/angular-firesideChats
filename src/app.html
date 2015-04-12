@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12 m3 l2">&nbsp;</div>
+        <div class="col s12 m6 l8">
+            <h2>Welcome to the Angular Fireside Chats :)</h2>
+
+            <div>
+                <p>Here are your most beloved Voxxed chatters</p>
+
+                <chatter-list title="organisers">
+                    <chatter-card *for="#organiser of organisers" [item]="organiser"></chatter-card>
+                </chatter-list>
+
+                <chatter-list title="speakers">
+                    <chatter-card *for="#speaker of speakers" [item]="speaker"></chatter-card>
+                </chatter-list>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m3 l2"></div>
+</div>
