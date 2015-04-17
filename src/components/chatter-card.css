@@ -1,0 +1,9 @@
+.chatter-avatar{
+    width: 10%;
+    border-radius: 3em;
+}
+
+.chat-time {
+    font-size: 11px;
+    color: lightgray;
+}

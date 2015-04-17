@@ -1,0 +1,10 @@
+<div>
+    <div class="left-pane">
+        <!--<chatter-list [chatters]="chatters"></chatter-list>-->
+    </div>
+
+    <div class="right-pane">
+        <chat-pane [chat-history]="chatHistory"></chat-pane>
+        <textarea #chat (keydown)="sendChat($event, chat)"></textarea>
+    </div>
+</div>

@@ -1,7 +1,14 @@
+// angular-related imports
 import {bootstrap, Component, Template, For} from 'angular2/angular2';
+
+// components
 import {ChatterList} from 'components/chatter-list';
 import {ChatterCard} from 'components/chatter-card';
+import {FiresideChat} from 'components/fireside-chat';
+
+// services
 import {DataService} from 'services/DataService';
+
 
 @Component({
     selector: 'fireside-chats-app',
@@ -10,21 +17,28 @@ import {DataService} from 'services/DataService';
 
 @Template ({
     url: 'app.html',
-    directives: [ChatterList, ChatterCard, For]
+    directives: [ChatterCard, FiresideChat, For]
 })
 
 export class FiresideChatsApp {
     organisers: Array;
-    speakers: Array;
+    showChatRoom: boolean;
 
     constructor(dataService: DataService) {
+        this.showChatRoom = false;
         dataService.getOrganisers().then((organisers) => {
             this.organisers = organisers;
         });
-        dataService.getSpeakers().then((speakers) => {
-            this.speakers = speakers;
-        });
+    }
+
+    startChat() {
+        this.showChatRoom = true;
+    }
+
+    endChat() {
+        this.showChatRoom = false;
     }
 }
 
+// bootstrap the app
 bootstrap(FiresideChatsApp);

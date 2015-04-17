@@ -1,19 +1,20 @@
+<!-- [@Carmen]TODO encapsulate div soup in a separate component -->
 <div class="container">
     <div class="row">
         <div class="col s12 m3 l2">&nbsp;</div>
         <div class="col s12 m6 l8">
-            <h2>Welcome to the Angular Fireside Chats :)</h2>
+            <div [hidden]="showChatRoom">
+                <h2>Hi there! Have a seat by the fireplace and enjoy a nice chat.</h2>
 
-            <div>
-                <p>Here are your most beloved Voxxed chatters</p>
+                <h4>Chatters</h4>
+                <chatter-card *for="#organiser of organisers" [item]="organiser"></chatter-card>
+                <button (click)="startChat()">Start chatting</button>
+            </div>
 
-                <chatter-list title="organisers">
-                    <chatter-card *for="#organiser of organisers" [item]="organiser"></chatter-card>
-                </chatter-list>
-
-                <chatter-list title="speakers">
-                    <chatter-card *for="#speaker of speakers" [item]="speaker"></chatter-card>
-                </chatter-list>
+            <div [hidden]="!showChatRoom">
+                <h2>By the fireplace</h2>
+                <a (click)="endChat()">Leave chat room</a>
+                <fireside-chat [chatters]="organisers"></fireside-chat>
             </div>
         </div>
     </div>

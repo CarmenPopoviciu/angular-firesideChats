@@ -1,7 +1,5 @@
 import {Component, Template, If} from 'angular2/angular2';
 
-const TWITTER_URL: string = 'https://twitter.com/';
-
 @Component({
     selector: 'chatter-card',
     bind: {
@@ -24,9 +22,5 @@ export class ChatterCard {
 
     toggle() {
         this.showDetails = !this.showDetails;
-    }
-
-    getLinkToTwitterProfile() {
-        return TWITTER_URL.concat(this.item.twitterHandle);
     }
 }
