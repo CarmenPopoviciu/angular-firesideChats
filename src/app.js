@@ -2,12 +2,12 @@
 import {bootstrap, Component, View, For} from 'angular2/angular2';
 
 // components
-import {ChatterList} from 'components/chatter-list';
-import {ChatterCard} from 'components/chatter-card';
-import {FiresideChat} from 'components/fireside-chat';
+import {ChatterList} from 'chatter-list';
+import {ChatterCard} from 'chatter-card';
+import {FiresideChat} from 'fireside-chat';
 
 // services
-import {DataService} from 'services/DataService';
+import {DataService} from 'DataService';
 
 
 @Component({

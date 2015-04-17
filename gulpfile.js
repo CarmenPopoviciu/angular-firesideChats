@@ -4,6 +4,7 @@ var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var traceur = require('gulp-traceur');
+var flatten = require('gulp-flatten');
 
 var PATHS = {
     src: {
@@ -29,6 +30,7 @@ gulp.task('clean', function(done) {
 
 gulp.task('js', function () {
     return gulp.src(PATHS.src.js)
+        .pipe(flatten())
         .pipe(rename({extname: ''})) //hack, see: https://github.com/sindresorhus/gulp-traceur/issues/54
         .pipe(plumber())
         .pipe(traceur({
@@ -44,16 +46,19 @@ gulp.task('js', function () {
 
 gulp.task('html', function () {
     return gulp.src(PATHS.src.html)
+        .pipe(flatten())
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('css', function () {
     return gulp.src(PATHS.src.css)
+        .pipe(flatten())
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('json', function () {
     return gulp.src(PATHS.src.json)
+        .pipe(flatten())
         .pipe(gulp.dest('dist'));
 });
 

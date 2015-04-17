@@ -2,11 +2,11 @@
 import {Component, View} from 'angular2/angular2';
 
 // components
-import {ChatPane} from 'components/chat-pane';
-import {ChatterList} from 'components/chatter-list';
+import {ChatPane} from 'chat-pane';
+import {ChatterList} from 'chatter-list';
 
 // services
-import {ChatService} from 'services/ChatService';
+import {ChatService} from 'ChatService';
 
 
 @Component ({
@@ -18,7 +18,7 @@ import {ChatService} from 'services/ChatService';
 })
 
 @View({
-    templateUrl: 'components/fireside-chat.html',
+    templateUrl: 'fireside-chat.html',
     directives: [ChatPane, ChatterList]
 })
 

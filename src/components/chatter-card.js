@@ -8,7 +8,7 @@ import {Component, View, If} from 'angular2/angular2';
 })
 
 @View({
-    templateUrl: 'components/chatter-card.html',
+    templateUrl: 'chatter-card.html',
     directives: [If]
 })
 
