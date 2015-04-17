@@ -33,8 +33,8 @@ export class FiresideChat {
 
     sendChat(event, chat) {
         if(event.keyCode === 13) {
-            this.chatService.pushChatMessage(chat.value);
-            chat.value = '';
+            this.chatService.pushChatMessage(chat.domElement.value);
+            chat.domElement.value = '';
         }
     }
 }
