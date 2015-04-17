@@ -10,6 +10,7 @@
     "del": "~1.1.1",
     "gulp": "~3.8.10",
     "gulp-concat": "~2.5.0",
+    "gulp-flatten": "0.0.4",
     "gulp-plumber": "^1.0.0",
     "gulp-rename": "~1.2.0",
     "gulp-traceur": "0.17.*",
@@ -19,10 +20,10 @@
     "through2": "~0.6.3"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.18",
-    "es6-module-loader": "0.16.3",
+    "angular2": "2.0.0-alpha.19",
+    "es6-module-loader": "0.16.5",
     "materialize-css": "^0.96.1",
-    "systemjs": "~0.16.6",
+    "systemjs": "~0.16.7",
     "whatwg-fetch": "^0.7.0"
   }
 }
