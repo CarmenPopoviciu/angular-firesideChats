@@ -1,14 +1,14 @@
-import {Component, Template, For} from 'angular2/angular2';
+import {Component, View, For} from 'angular2/angular2';
 
 @Component({
     selector: 'chat-pane',
-    bind: {
+    properties: {
         chatHistory: 'chat-history'
     }
 })
 
-@Template({
-    inline: '<div>' +
+@View({
+    template: '<div>' +
                 '<div *for="#chat of chatHistory">' +
                     '<div>' +
                         '<img class="chatter-avatar" [src]="chat.chatter.avatar">' +

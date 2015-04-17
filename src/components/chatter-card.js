@@ -1,14 +1,14 @@
-import {Component, Template, If} from 'angular2/angular2';
+import {Component, View, If} from 'angular2/angular2';
 
 @Component({
     selector: 'chatter-card',
-    bind: {
+    properties: {
         item: 'item'
     }
 })
 
-@Template({
-    url: 'components/chatter-card.html',
+@View({
+    templateUrl: 'components/chatter-card.html',
     directives: [If]
 })
 

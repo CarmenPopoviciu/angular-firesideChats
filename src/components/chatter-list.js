@@ -1,14 +1,14 @@
-import {Component, Template} from 'angular2/angular2';
+import {Component, View} from 'angular2/angular2';
 
 @Component({
     selector: 'chatter-list',
-    bind: {
+    properties: {
         title: 'title'
     }
 })
 
-@Template({
-    inline: `<div>
+@View({
+    template: `<div>
                 <h3>{{getUpperCaseTitle()}}</h3>
                 <content></content>
             </div>`

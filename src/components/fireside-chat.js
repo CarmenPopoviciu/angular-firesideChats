@@ -1,5 +1,5 @@
 // angular-related imports
-import {Component, Template} from 'angular2/angular2';
+import {Component, View} from 'angular2/angular2';
 
 // components
 import {ChatPane} from 'components/chat-pane';
@@ -11,14 +11,14 @@ import {ChatService} from 'services/ChatService';
 
 @Component ({
     selector: 'fireside-chat',
-    bind: {
+    properties: {
         chatters: 'chatters'
     },
-    services: [ChatService]
+    injectables: [ChatService]
 })
 
-@Template({
-    url: 'components/fireside-chat.html',
+@View({
+    templateUrl: 'components/fireside-chat.html',
     directives: [ChatPane, ChatterList]
 })
 

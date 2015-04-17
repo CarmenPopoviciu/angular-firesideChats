@@ -1,5 +1,5 @@
 // angular-related imports
-import {bootstrap, Component, Template, For} from 'angular2/angular2';
+import {bootstrap, Component, View, For} from 'angular2/angular2';
 
 // components
 import {ChatterList} from 'components/chatter-list';
@@ -12,11 +12,11 @@ import {DataService} from 'services/DataService';
 
 @Component({
     selector: 'fireside-chats-app',
-    services: [DataService]
+    injectables: [DataService]
 })
 
-@Template ({
-    url: 'app.html',
+@View ({
+    templateUrl: 'app.html',
     directives: [ChatterCard, FiresideChat, For]
 })
 
