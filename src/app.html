@@ -4,7 +4,7 @@
         <div class="col s12 m6 l8">
           <h1>{{name}}</h1>
 
-          <chatter-card [item]="item"></chatter-card>
+          <chatter-card *for="#item of items" [item]="item"></chatter-card>
         </div>
     </div>
     <div class="col s12 m3 l2"></div>
