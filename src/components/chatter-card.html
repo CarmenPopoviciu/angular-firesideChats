@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-content">
+        <img [src]="item.avatar">
+        <div>
+            <a [href]="'https://twitter.com/' + item.twitterHandle">@{{item.twitterHandle}}</a>
+        </div>
+    </div>
+
+    <div [hidden]="!showDetails">
+        <h4>{{item.name}}</h4>
+        <p>{{item.description}}</p>
+    </div>
+
+    <div class="card-action">
+        <a (click)="toggle()">{{showDetails ? 'Less' : 'More'}} details</a>
+    </div>
+</div>
